@@ -1,0 +1,202 @@
+
+$sidebar-primary: #2d3234;
+$sidebar-secondary: #fffffd;
+$sidebar-additional: #abacb0;
+
+$primary-color: #fbfbfb;
+$secondary-color: #2c2d2d;
+$link-color: #5c79b1;
+
+$secondary-font: 'Open Sans', sans-serif;
+
+$sidebar-width: 270px;
+
+* {
+margin: 0;
+padding: 0;
+}
+
+
+@font-face {
+   font-family: 'main-font';
+   src: url("/assets/fonts/Kadwa.ttf") format("truetype");
+}
+
+body {
+    font-family: 'main-font', serif;
+    text-align: left;
+    max-width: 1980px;
+    background-color: $sidebar-primary;
+    margin: 0 auto;
+}
+#sidebar {
+    font-family: $secondary-font;
+    font-weight: 500;
+    letter-spacing: 0.4px;
+    background-color: $sidebar-primary;
+    margin: 0;
+    padding: 0;
+    width: $sidebar-width;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+    color: #fff;
+
+    img {
+        width: calc($sidebar-width / 1.5);
+        border-radius: 100%;
+        margin: 20px auto;
+        display: block;
+    }
+
+    a {
+        color: #fff;
+        text-decoration: none;
+        display: block;
+        width: calc($sidebar-width / 1.2);
+        margin: 10px auto;
+        text-align: center;
+        line-height: 1.5em;
+        font-size: 1.2em;
+        padding: 10px 0;
+        border-radius: 4px;
+        border: 0.5px solid $sidebar-primary;
+    }
+    a:hover {
+        background-color: rgba(0,0,0,0.3);
+        border: 0.5px solid $sidebar-additional;
+    }
+    a.active {
+        border: 0.5px solid $sidebar-additional;
+    }
+    #logo a {
+        margin: 0 auto;
+        border-radius: 100%;
+        background-color: $sidebar-primary;
+        border: none;
+    }
+    #logo a:hover {
+        background-color: $sidebar-primary;
+        border: none;
+        
+    }
+
+}
+
+#toggleSidebar {
+    float: left;
+    position: fixed;
+    top: 0;
+    margin-left: $sidebar-width;
+    background: none;
+    border: none;
+    font-size: 30px;
+    color: $sidebar-additional;
+    padding: 10px 15px;
+    line-height: 1;
+}
+#toggleSidebar:hover {
+    cursor: pointer;
+    color: rgba(0,0,0,0.7);
+    text-decoration: none;
+}
+
+
+.hidden {
+    display: none;
+}
+.margin-off {
+    margin-left: 0!important;
+}
+
+div#content {
+    margin-left: $sidebar-width;
+    padding: 20px 80px;
+    min-height: 1000px;
+    background-color: $primary-color;
+    color: $secondary-color;
+    list-style-position: inside;
+
+    a {
+        color: $link-color;
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    padding-top: 20px;
+}
+h1 { font-size: 2.4em; }
+h2 { font-size: 2.2em; }
+h3 { font-size: 2.0em; }
+h4 { font-size: 1.8em; }
+h5 { font-size: 1.6em; }
+h6 { font-size: 1.4em; }
+
+ol, ul {
+    padding: 10px 20px;
+}
+
+li, p {
+    line-height: 1.3em;
+}
+
+a {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+figure {
+    max-width: 500px;
+    float: right;
+    border-radius: 5px;
+    box-shadow: 0px 7px 24px 5px #ADADAD;
+    border: 1px solid #222;
+}
+figure img {
+    max-width: 100%;
+    min-width: 450px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+figure figcaption {
+    margin-top: -10px;
+    padding: 0px 15px;
+}
+
+
+blockquote {
+    border-radius: 5px;
+    box-shadow: 0px 7px 24px 5px #ADADAD;
+    background-color: #fefefe;
+    padding: 20px 30px;
+    margin: 30px 40px;
+    line-height: 1.7em;
+    font-weight: 300;
+    letter-spacing: 0.4px;
+}
+.important-notice {
+    border: 1px solid #ae1d15;
+}
+
+.footnote-link {
+  color: blue;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.footnote-highlight {
+  background-color: yellow;
+}
+
+#footer {
+    margin-top: 300px;
+    border-top: 1px solid $secondary-color;
+    color: $secondary-color;
+}
+#footer p {
+    color: #777;
+    margin-top: 10px;
+    font-size: 0.8em;
+}

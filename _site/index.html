@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Welcome, visitor! - toenergy.org</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="icon" type="image/x-icon" href="/assets/img/favicon.ico">
+</head>
+<body>
+
+    <a id="toggleSidebar" onclick=toggleSidebar() class="button">&#9776;</a>
+
+<script>
+    function toggleSidebar() {
+        var sidebar = document.getElementById("sidebar");
+        sidebar.classList.toggle("hidden");
+        var content = document.getElementById("content");
+        content.classList.toggle("margin-off");
+        var button = document.getElementById("toggleSidebar");
+        button.classList.toggle("margin-off");
+        button.classList.toggle("close");
+        console.log("button clicked");
+    }
+</script>
+
+<style>
+</style>
+<div id="sidebar">
+<div id="logo">
+    <a href="/"><img src="/assets/img/logo.jpg"></a>
+</div>
+<nav>
+
+    <a href="/" class="active">
+        Home
+    </a>
+
+    <a href="/about/" >
+        About
+    </a>
+
+    <a href="/tags/" >
+        Tags
+    </a>
+
+    <a href="/archive/" >
+        Archive
+    </a>
+
+</nav>
+</div>
+
+    <div id="content">
+        <h1>Welcome, visitor!</h1>
+<p style="float: right; margin-top:-50px;" id="date"></p>
+
+  <script>
+    function displayCurrentDate() {
+      var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+      var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+      var currentDate = new Date();
+      var day = currentDate.getDate();
+      var monthIndex = currentDate.getMonth();
+      var month = months[monthIndex];
+      var year = currentDate.getFullYear();
+
+
+      document.getElementById("date").textContent = days[currentDate.getDay()] + ", " + day + ". " + month + " " + year;;
+    }
+    displayCurrentDate();
+  </script>
+
+
+<p>Hi, I'm Stefan. On this site you can find some of my notes and writings about the topic of energy, more specifically fossil fuels and the transition to renewables, as well as economics and policy-making, especially in developing countries.<p>
+
+<blockquote class="important-notice">
+This website is still under heavy development. If you want to stay in touch with this project, add the site to your bookmarks and check in later. The best is yet to come! :)
+</blockquote>
+
+<h3>Topics by Tags</h3>
+  <p>Here you can find some tags to various articles. Choose one that interests you and start your reading right away:</p>
+<ul>
+    
+    <li><a href="/tags/coal">coal</a></li>
+  
+    <li><a href="/tags/china">china</a></li>
+  
+</ul>
+
+<figure>
+    <img src="/assets/img/coal-powerplant.jpg"/>
+    <figcaption>fig:coalpp - Coal Power Plant in England. </br>&copy; cattan2011 | CC-BY 2.0</figcaption>
+</figure>
+
+<h3>Recent Posts</h3>
+<p>Here are the newest articles I've published:</p>
+<ul>
+  
+    <li><a href="/post/test-file/">Test File</a></li>
+  
+</ul>
+
+
+        <div id="footer">
+    <center><p>&copy; 2023 Topic of Energy - toenergy.org. <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC-BY-NC-SA 4.0</a> Some Rights Reserved.</p></center>
+</div>
+
+    </div>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var footnoteLinks = document.querySelectorAll(".footnotes);
+
+    footnoteLinks.forEach(function(link) {
+      link.addEventListener("click", function(event) {
+        event.preventDefault();
+        var footnoteId = link.getAttribute("href").replace("#fn:", "");
+        var footnote = document.getElementById(footnoteId);
+
+        if (footnote) {
+          footnote.classList.toggle("footnote-highlight");
+        }
+      });
+    });
+  });
+</script>
+</body>
+</html>

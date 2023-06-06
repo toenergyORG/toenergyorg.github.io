@@ -1,0 +1,29 @@
+<a id="toggleSidebar" onclick=toggleSidebar() class="button">&#9776;</a>
+
+<script>
+    function toggleSidebar() {
+        var sidebar = document.getElementById("sidebar");
+        sidebar.classList.toggle("hidden");
+        var content = document.getElementById("content");
+        content.classList.toggle("margin-off");
+        var button = document.getElementById("toggleSidebar");
+        button.classList.toggle("margin-off");
+        button.classList.toggle("close");
+        console.log("button clicked");
+    }
+</script>
+
+<style>
+</style>
+<div id="sidebar">
+<div id="logo">
+    <a href="/"><img src="/assets/img/logo.jpg"></a>
+</div>
+<nav>
+{% for item in site.data.navigation %}
+    <a href="{{ item.link }}" {% if page.url == item.link %}class="active"{% endif %}>
+        {{ item.name }}
+    </a>
+{% endfor %}
+</nav>
+</div>

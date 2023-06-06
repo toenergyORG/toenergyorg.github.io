@@ -1,0 +1,33 @@
+---
+layout: default
+---
+<a href="#" onclick="goBack()">《 Go Back</a>
+<h1 style="padding-top: 0px!important;">{{ page.title }}</h1>
+<p style="word-spacing: 5px">Tags: 
+  {% for tag in page.tags %}
+    <a href="/tags/{{ tag }}">{{ tag }}</a>
+  {% endfor %}
+</p>
+<p style="float:right; margin-top: -120px;">Published on {{ page.date | date_to_string }}</p>
+</br>
+
+
+<script>
+function goBack() {
+    var referringURL = document.referrer;
+    // testing
+    var specificDomain = 'http://127.0.0.1:4000';
+    // production
+    //var specificDomain = 'http://127.0.0.1:4000';
+    
+    if (referringURL.includes(specificDomain)) {
+      history.go(-1); // Go back
+    } else {
+      window.location.href = 'http://www.toenergy.org'; // Go to example webpage
+    }
+  }
+</script>
+
+
+
+{{ content }}

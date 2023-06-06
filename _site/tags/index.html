@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title> - toenergy.org</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="icon" type="image/x-icon" href="/assets/img/favicon.ico">
+</head>
+<body>
+
+    <a id="toggleSidebar" onclick=toggleSidebar() class="button">&#9776;</a>
+
+<script>
+    function toggleSidebar() {
+        var sidebar = document.getElementById("sidebar");
+        sidebar.classList.toggle("hidden");
+        var content = document.getElementById("content");
+        content.classList.toggle("margin-off");
+        var button = document.getElementById("toggleSidebar");
+        button.classList.toggle("margin-off");
+        button.classList.toggle("close");
+        console.log("button clicked");
+    }
+</script>
+
+<style>
+</style>
+<div id="sidebar">
+<div id="logo">
+    <a href="/"><img src="/assets/img/logo.jpg"></a>
+</div>
+<nav>
+
+    <a href="/" >
+        Home
+    </a>
+
+    <a href="/about/" >
+        About
+    </a>
+
+    <a href="/tags/" class="active">
+        Tags
+    </a>
+
+    <a href="/archive/" >
+        Archive
+    </a>
+
+</nav>
+</div>
+
+    <div id="content">
+        <h1>All Tags on this website</h1>
+
+<ul>
+  
+    <li><a href="/tags/coal">coal</a></li>
+  
+    <li><a href="/tags/china">china</a></li>
+  
+</ul>
+
+        <div id="footer">
+    <center><p>&copy; 2023 Topic of Energy - toenergy.org. <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC-BY-NC-SA 4.0</a> Some Rights Reserved.</p></center>
+</div>
+
+    </div>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var footnoteLinks = document.querySelectorAll(".footnotes);
+
+    footnoteLinks.forEach(function(link) {
+      link.addEventListener("click", function(event) {
+        event.preventDefault();
+        var footnoteId = link.getAttribute("href").replace("#fn:", "");
+        var footnote = document.getElementById(footnoteId);
+
+        if (footnote) {
+          footnote.classList.toggle("footnote-highlight");
+        }
+      });
+    });
+  });
+</script>
+</body>
+</html>
