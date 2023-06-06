@@ -15,10 +15,8 @@ layout: default
 <script>
 function goBack() {
     var referringURL = document.referrer;
-    // testing
-    var specificDomain = 'http://127.0.0.1:4000';
     // production
-    //var specificDomain = 'http://127.0.0.1:4000';
+    var specificDomain = 'toenergy.org';
     
     if (referringURL.includes(specificDomain)) {
       history.go(-1); // Go back
