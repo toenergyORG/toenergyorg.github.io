@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-<a href="#" onclick="goBack()">《 Go Back</a>
+<a href="#" onclick="goBack()">&#706; &nbsp; Go Back</a>
 <h1 style="padding-top: 0px!important;">{{ page.title }}</h1>
 <p style="word-spacing: 5px">Tags: 
   {% for tag in page.tags %}
@@ -19,9 +19,9 @@ function goBack() {
     var specificDomain = 'toenergy.org';
     
     if (referringURL.includes(specificDomain)) {
-      history.go(-1); // Go back
+      history.go(-1); 
     } else {
-      window.location.href = 'http://www.toenergy.org'; // Go to example webpage
+      window.location.href = 'http://www.toenergy.org'; 
     }
   }
 </script>

@@ -5,7 +5,7 @@
 
 @font-face {
   font-family: "main-font";
-  src: url("/assets/fonts/Kadwa.ttf") format("truetype");
+  src: url("/assets/fonts/KaiseiOpti.ttf") format("truetype");
 }
 body {
   font-family: "main-font", serif;
@@ -13,6 +13,7 @@ body {
   max-width: 1980px;
   background-color: #2d3234;
   margin: 0 auto;
+  font-size: 1.05em;
 }
 
 #sidebar {
@@ -94,10 +95,11 @@ body {
 
 div#content {
   margin-left: 270px;
-  padding: 20px 80px;
+  padding: 20px 80px 20px 100px;
   min-height: 1000px;
   background-color: #fbfbfb;
   color: #2c2d2d;
+  list-style-position: outside;
 }
 div#content a {
   color: #5c79b1;
@@ -132,16 +134,17 @@ h6 {
 }
 
 ol, ul {
-  padding: 10px 20px;
+  padding: 10px 40px;
+  list-style-position: outside !important;
 }
 
-li, p {
+p {
   line-height: 1.4em;
   margin-top: 0.7em;
 }
 
-p {
-  margin-top: 0.7em;
+li {
+  margin-bottom: 0.7em;
 }
 
 a {
@@ -182,6 +185,9 @@ blockquote {
   font-weight: 300;
   letter-spacing: 0.4px;
 }
+blockquote p {
+  margin: 0;
+}
 
 .important-notice {
   border: 1px solid #ae1d15;
@@ -207,6 +213,12 @@ blockquote {
   color: #777;
   margin-top: 10px;
   font-size: 0.8em;
+}
+
+@media only screen and (max-width: 1400px) {
+  div#content {
+    background-color: lightblue;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

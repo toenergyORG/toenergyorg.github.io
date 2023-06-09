@@ -2,7 +2,7 @@ title: toenergy.org
 description: Hi, I'm Stefan. On this site you can find some of my notes and writings about the topic of energy, more specifically fossil fuels and the transition to renewables, as well as economics and policy-making, especially in developing countries. 
 markdown: kramdown
 
-baseurl: toenergy.org
+#baseurl: toenergy.org
 
 permalink: /post/:title/
 
