@@ -73,7 +73,8 @@ body {
         border: 0.5px solid $sidebar-additional;
     }
     a.active {
-        border: 0.5px solid $sidebar-additional;
+        // border: 0.5px solid $sidebar-additional;
+        background-color: rgba(0,0,0,0.3);
     }
     #logo a {
         margin: 0 auto;
@@ -123,6 +124,8 @@ body {
 
 
 div#content {
+    background-image: url("/assets/img/bg-pattern.webp");
+    background-repeat: repeat;
     margin-left: $sidebar-width;
     margin-top: 0px;
     padding: 20px 80px 20px 100px;
@@ -184,21 +187,33 @@ a:hover {
 
 figure {
     max-width: 500px;
-    float: right;
-    border-radius: 5px;
+    border-radius: 2px;
     box-shadow: 0px 7px 24px 5px #ADADAD;
     border: 1px solid #222;
     margin-bottom: 25px;
 }
 figure img {
-    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+    padding: 2.5% 0;
+    max-width: 95%;
     min-width: 450px;
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
 }
 figure figcaption {
     margin-top: -4px;
-    padding: 0px 15px;
+    padding: 0px 15px 10px 15px;
+    font-size: 0.9em;
+}
+
+.fig-right {
+    float: right;
+    margin-left: 25px;
+}
+.fig-left {
+    float: left; 
+    margin-right: 25px;
 }
 
 
@@ -257,6 +272,16 @@ blockquote {
             max-width: 390px;
             min-width: 150px;
         }
+    }
+    figure img {
+
+        padding: 0;
+        max-width: 100%;
+        border-top-left-radius: 1px;
+        border-top-right-radius: 1px;
+    }
+    figure figcaption {
+        padding: 10px 15px 10px 15px;
     }
   }
 
@@ -410,7 +435,7 @@ blockquote {
     }
   }
 
-  @media only screen and (max-width: 350px) {
+  @media only screen and (max-width: 425px) {
     #toggleSidebar span {
         display: none;
     }
@@ -418,7 +443,7 @@ blockquote {
         padding: 20px 10px;
     }
     div#content {
-        padding: 0px 5px 20px 5px;
+        padding: 0px 13px 20px 13px;
     }
     blockquote {
         margin: 20px 2px;
