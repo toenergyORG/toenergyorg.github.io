@@ -83,7 +83,9 @@ body {
         border: none;
         
     }
-
+    #logo-alt {
+        display: none;
+    }
 }
 
 #toggleSidebar {
@@ -97,6 +99,10 @@ body {
     color: $sidebar-additional;
     padding: 10px 15px;
     line-height: 1;
+
+    span {
+        display: none;
+    }
 }
 #toggleSidebar:hover {
     cursor: pointer;
@@ -112,8 +118,10 @@ body {
     margin-left: 0!important;
 }
 
+
 div#content {
     margin-left: $sidebar-width;
+    margin-top: 0px;
     padding: 20px 80px 20px 100px;
     min-height: 1000px;
     background-color: $primary-color;
@@ -123,9 +131,25 @@ div#content {
         color: $link-color;
     }
 }
+#logo-alt {
+    display: none;
+}
+
+#post-title {
+    padding-top: 0px !important;
+    margin-bottom: 10px;
+}
+
+#pub-date {
+    float: right; 
+    margin-top: -120px;
+}
+
 
 h1, h2, h3, h4, h5, h6 {
     padding-top: 15px;
+    padding-bottom: 15px;
+    line-height: 1.1em;
 }
 h1 { font-size: 2.4em; }
 h2 { font-size: 2.2em; }
@@ -161,6 +185,7 @@ figure {
     border-radius: 5px;
     box-shadow: 0px 7px 24px 5px #ADADAD;
     border: 1px solid #222;
+    margin-bottom: 25px;
 }
 figure img {
     max-width: 100%;
@@ -169,7 +194,7 @@ figure img {
     border-top-right-radius: 4px;
 }
 figure figcaption {
-    margin-top: -10px;
+    margin-top: -4px;
     padding: 0px 15px;
 }
 
@@ -215,8 +240,181 @@ blockquote {
 }
 
 
-@media only screen and (max-width: 1400px) {
+@media only screen and (max-width: 1200px) {
     div#content {
-      background-color: lightblue;
+        padding: 20px 50px 20px 80px;
+    }
+    blockquote {
+        margin: 30px 10px;
+    }
+    figure {
+        max-width: 390px;
+
+        img {
+            max-width: 390px;
+            min-width: 150px;
+        }
     }
   }
+
+  @media only screen and (min-width: 671px) and (max-width: 950px) {
+    div#content {
+        padding: 0px 30px 20px 30px;
+
+    }
+    #sidebar {
+        width: 100%;
+        height: auto;
+        position: static;
+        display: block!important;
+
+        #logo {
+            display: none;
+        }
+        nav {
+            display: block;
+            padding-left: 50px;
+        }
+        a {
+            display: inline-block;
+            width: auto;
+            margin: 0px;
+            padding: 8px 20px;
+            border-radius: 0;
+            border-left: none;
+            border-right: none;
+            border-top: none;
+            border-bottom: 4px solid $sidebar-primary;
+            padding: 9px 20px;
+        }
+        a:hover, a.active {
+            border-left: none;
+            border-right: none;
+            border-top: none;
+            border-bottom: 4px solid $link-color;
+        }
+        #logo-alt {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+    }
+    #toggleSidebar {
+        display: none;
+    }
+    div#content {
+        margin-left: 0px;
+        padding-top: 10px;
+    }    
+
+  }
+
+  @media only screen and (max-width: 670px) {
+
+    div#content {
+        padding: 0px 30px 20px 30px;
+        margin-left: 0px;
+        padding-top: 10px;
+    }
+    #sidebar {
+        width: 100%;
+        height: auto;
+        position: static;
+
+        nav {
+            padding-left: 0;
+        }
+
+        #logo {
+            display: none;
+        }
+        nav {
+            display: block;
+            padding-left: 0;
+            font-family: Arial, Verdana;
+        }
+        a {
+            width: auto;
+            margin: 0px;
+            padding: 13px 20px;
+            display: block;
+            border: none;
+        }
+        a:hover, a.active {
+            border: none;
+        }
+ 
+    }
+    #logo-alt {
+        display: inline-block;
+        margin-left: 10px;
+        letter-spacing: 1px;
+
+    }  
+
+    #date {
+        display: none;
+    }
+
+    figure {
+        width: 100%; 
+        max-width: none;
+        img {
+            width: 100%;
+            max-width: none;
+        }
+    }
+
+    #logo-alt {
+        display: block;
+        height: auto; 
+        color: #fff;
+        padding: 20px 40px;
+        font-size: 1.3em;
+    }
+    #toggleSidebar {
+        z-index: 999;
+        display: block;
+        position: absolute;
+        top: 0px;
+        right: 15px; 
+        left: auto;
+        margin-left: 0px;
+        margin-top: -5px;
+        font-size: 2.5em;
+
+        span {
+            display: inline-block;
+            font-size: 0.4em;
+            vertical-align: middle;
+            padding-left: 5px; 
+        }
+    }
+    #toggleSidebar:hover {
+        color: #fff;
+    }
+
+  }
+
+  @media only screen and (max-width: 500px) {
+    #pub-date {
+        float: none; 
+        margin-top: 10px;
+
+    }
+  }
+
+  @media only screen and (max-width: 350px) {
+    #toggleSidebar span {
+        display: none;
+    }
+    #logo-alt {
+        padding: 20px 10px;
+    }
+    div#content {
+        padding: 0px 5px 20px 5px;
+    }
+    blockquote {
+        margin: 20px 2px;
+    }
+}

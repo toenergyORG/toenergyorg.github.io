@@ -1,6 +1,12 @@
-<a id="toggleSidebar" onclick=toggleSidebar() class="button">&#9776;</a>
+<a id="toggleSidebar" onclick=toggleSidebar() class="button">&#9776;<span>Menu</span></a>
 
 <script>
+    // Check screen size on window resize
+    document.addEventListener("DOMContentLoaded", function() {
+        checkScreenSize();
+        window.addEventListener("resize", checkScreenSize);
+    });
+
     function toggleSidebar() {
         var sidebar = document.getElementById("sidebar");
         sidebar.classList.toggle("hidden");
@@ -15,6 +21,7 @@
 
 <style>
 </style>
+<span id="logo-alt">ToEnergy.Org</span>
 <div id="sidebar">
 <div id="logo">
     <a href="/"><img src="/assets/img/logo.jpg"></a>

@@ -65,6 +65,9 @@ body {
   background-color: #2d3234;
   border: none;
 }
+#sidebar #logo-alt {
+  display: none;
+}
 
 #toggleSidebar {
   float: left;
@@ -77,6 +80,9 @@ body {
   color: #abacb0;
   padding: 10px 15px;
   line-height: 1;
+}
+#toggleSidebar span {
+  display: none;
 }
 
 #toggleSidebar:hover {
@@ -95,6 +101,7 @@ body {
 
 div#content {
   margin-left: 270px;
+  margin-top: 0px;
   padding: 20px 80px 20px 100px;
   min-height: 1000px;
   background-color: #fbfbfb;
@@ -105,8 +112,24 @@ div#content a {
   color: #5c79b1;
 }
 
+#logo-alt {
+  display: none;
+}
+
+#post-title {
+  padding-top: 0px !important;
+  margin-bottom: 10px;
+}
+
+#pub-date {
+  float: right;
+  margin-top: -120px;
+}
+
 h1, h2, h3, h4, h5, h6 {
   padding-top: 15px;
+  padding-bottom: 15px;
+  line-height: 1.1em;
 }
 
 h1 {
@@ -161,6 +184,7 @@ figure {
   border-radius: 5px;
   box-shadow: 0px 7px 24px 5px #ADADAD;
   border: 1px solid #222;
+  margin-bottom: 25px;
 }
 
 figure img {
@@ -171,7 +195,7 @@ figure img {
 }
 
 figure figcaption {
-  margin-top: -10px;
+  margin-top: -4px;
   padding: 0px 15px;
 }
 
@@ -215,9 +239,162 @@ blockquote p {
   font-size: 0.8em;
 }
 
-@media only screen and (max-width: 1400px) {
+@media only screen and (max-width: 1200px) {
   div#content {
-    background-color: lightblue;
+    padding: 20px 50px 20px 80px;
+  }
+  blockquote {
+    margin: 30px 10px;
+  }
+  figure {
+    max-width: 390px;
+  }
+  figure img {
+    max-width: 390px;
+    min-width: 150px;
+  }
+}
+@media only screen and (min-width: 671px) and (max-width: 950px) {
+  div#content {
+    padding: 0px 30px 20px 30px;
+  }
+  #sidebar {
+    width: 100%;
+    height: auto;
+    position: static;
+    display: block !important;
+  }
+  #sidebar #logo {
+    display: none;
+  }
+  #sidebar nav {
+    display: block;
+    padding-left: 50px;
+  }
+  #sidebar a {
+    display: inline-block;
+    width: auto;
+    margin: 0px;
+    padding: 8px 20px;
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom: 4px solid #2d3234;
+    padding: 9px 20px;
+  }
+  #sidebar a:hover, #sidebar a.active {
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom: 4px solid #5c79b1;
+  }
+  #sidebar #logo-alt {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  #toggleSidebar {
+    display: none;
+  }
+  div#content {
+    margin-left: 0px;
+    padding-top: 10px;
+  }
+}
+@media only screen and (max-width: 670px) {
+  div#content {
+    padding: 0px 30px 20px 30px;
+    margin-left: 0px;
+    padding-top: 10px;
+  }
+  #sidebar {
+    width: 100%;
+    height: auto;
+    position: static;
+  }
+  #sidebar nav {
+    padding-left: 0;
+  }
+  #sidebar #logo {
+    display: none;
+  }
+  #sidebar nav {
+    display: block;
+    padding-left: 0;
+    font-family: Arial, Verdana;
+  }
+  #sidebar a {
+    width: auto;
+    margin: 0px;
+    padding: 13px 20px;
+    display: block;
+    border: none;
+  }
+  #sidebar a:hover, #sidebar a.active {
+    border: none;
+  }
+  #logo-alt {
+    display: inline-block;
+    margin-left: 10px;
+    letter-spacing: 1px;
+  }
+  #date {
+    display: none;
+  }
+  figure {
+    width: 100%;
+    max-width: none;
+  }
+  figure img {
+    width: 100%;
+    max-width: none;
+  }
+  #logo-alt {
+    display: block;
+    height: auto;
+    color: #fff;
+    padding: 20px 40px;
+    font-size: 1.3em;
+  }
+  #toggleSidebar {
+    z-index: 999;
+    display: block;
+    position: absolute;
+    top: 0px;
+    right: 15px;
+    left: auto;
+    margin-left: 0px;
+    margin-top: -5px;
+    font-size: 2.5em;
+  }
+  #toggleSidebar span {
+    display: inline-block;
+    font-size: 0.4em;
+    vertical-align: middle;
+    padding-left: 5px;
+  }
+  #toggleSidebar:hover {
+    color: #fff;
+  }
+}
+@media only screen and (max-width: 500px) {
+  #pub-date {
+    float: none;
+    margin-top: 10px;
+  }
+}
+@media only screen and (max-width: 350px) {
+  #toggleSidebar span {
+    display: none;
+  }
+  #logo-alt {
+    padding: 20px 10px;
+  }
+  div#content {
+    padding: 0px 5px 20px 5px;
+  }
+  blockquote {
+    margin: 20px 2px;
   }
 }
 
