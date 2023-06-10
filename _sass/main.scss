@@ -1,5 +1,5 @@
 
-$sidebar-primary: #2d3234;
+$sidebar-primary: #074280;
 $sidebar-secondary: #fffffd;
 $sidebar-additional: #abacb0;
 
@@ -16,6 +16,9 @@ margin: 0;
 padding: 0;
 }
 
+html {
+    -webkit-text-size-adjust: 100%;
+}
 
 @font-face {
    font-family: 'main-font';
@@ -293,11 +296,14 @@ blockquote {
             border-top: none;
             border-bottom: 4px solid $link-color;
         }
-        #logo-alt {
-            display: inline-block;
-            margin-right: 10px;
-        }
-
+    }
+    #logo-alt {
+        display: inline-block;
+        height: auto;
+        color: #fff;
+        padding: 20px 50px;
+        font-size: 1.3em;
+        letter-spacing: 1px;
     }
     #toggleSidebar {
         display: none;

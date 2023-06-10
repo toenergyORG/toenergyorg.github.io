@@ -3,6 +3,10 @@
   padding: 0;
 }
 
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
 @font-face {
   font-family: "main-font";
   src: url("/assets/fonts/KaiseiOpti.ttf") format("truetype");
@@ -11,7 +15,7 @@ body {
   font-family: "main-font", serif;
   text-align: left;
   max-width: 1980px;
-  background-color: #2d3234;
+  background-color: #074280;
   margin: 0 auto;
   font-size: 1.05em;
 }
@@ -20,7 +24,7 @@ body {
   font-family: "Open Sans", sans-serif;
   font-weight: 500;
   letter-spacing: 0.4px;
-  background-color: #2d3234;
+  background-color: #074280;
   margin: 0;
   padding: 0;
   width: 270px;
@@ -46,7 +50,7 @@ body {
   font-size: 1.2em;
   padding: 10px 0;
   border-radius: 4px;
-  border: 0.5px solid #2d3234;
+  border: 0.5px solid #074280;
 }
 #sidebar a:hover {
   background-color: rgba(0, 0, 0, 0.3);
@@ -58,11 +62,11 @@ body {
 #sidebar #logo a {
   margin: 0 auto;
   border-radius: 100%;
-  background-color: #2d3234;
+  background-color: #074280;
   border: none;
 }
 #sidebar #logo a:hover {
-  background-color: #2d3234;
+  background-color: #074280;
   border: none;
 }
 #sidebar #logo-alt {
@@ -280,7 +284,7 @@ blockquote p {
     border-left: none;
     border-right: none;
     border-top: none;
-    border-bottom: 4px solid #2d3234;
+    border-bottom: 4px solid #074280;
     padding: 9px 20px;
   }
   #sidebar a:hover, #sidebar a.active {
@@ -289,9 +293,13 @@ blockquote p {
     border-top: none;
     border-bottom: 4px solid #5c79b1;
   }
-  #sidebar #logo-alt {
+  #logo-alt {
     display: inline-block;
-    margin-right: 10px;
+    height: auto;
+    color: #fff;
+    padding: 20px 50px;
+    font-size: 1.3em;
+    letter-spacing: 1px;
   }
   #toggleSidebar {
     display: none;
